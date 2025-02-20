@@ -3,89 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ACTIVITY QUIZ WEBSITE</title>
+    <title>Activity Quiz Website</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="input.css" />
-
+    <link rel="stylesheet" href="input.css">
 </head>
-<body>
-    
+<body class="flex items-center justify-center min-h-screen bg-slate-900">
+    <div class="p-6 rounded-lg shadow-lg text-center w-full max-w-md bg-blue-900">
+        <h2 class="text-red-500 text-xl font-bold">Quiz Question</h2>
+        <p id="question" class="text-lg my-4 text-white font-bold"></p>
+        <input type="text" id="answer" placeholder="Enter your answer" class="border rounded p-2 w-full">
+        <br>
+        <button onclick="checkAnswer()" class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Submit</button>
+        <button onclick="nextQuestion()" id="nextBtn" class="mt-2 bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 hidden">Next Question</button>
+        <p id="feedback" class="mt-3 text-gray-700"></p>
+    </div>
+
+    <script src="main.js"></script>
 </body>
-
-<div class="container">
-    <h2 class="">Quiz Question</h2>
-    <p id="question"></p>
-    <input type="text" id="answer" placeholder="Enter your answer">
-    <br>
-    <button onclick="checkAnswer()">Submit</button>
-    <button onclick="nextQuestion()" id="nextBtn" class="hidden">Next Question</button>
-    <p id="feedback"></p>
-</div>
-
-<script>
-//babaguhin question
-//10 questions
-//feedback babaguhin
-//output
-// src code and video
-
-    const quizData = [
-        {question: "What does Html stand for?", answer: "hypertext markup language"},
-        {question: "What does css stand for?", answer: "hypertext markup language"},
-        {question: "What does js stand for?", answer: "hypertext markup language"}
-    ];
-    
-    let currentQuestionIndex = 0;
-    let correctAnswered = false;
-
-    //
-    function loadQuestion(){
-        document.getElementById("question").textContent = quizData[currentQuestionIndex].question;
-        document.getElementById("answer").value = "";
-        document.getElementById("feedback").textContent = "";
-        document.getElementById("nextBtn").classList.add("hidden");
-        correctAnswered = false; // reset 
-    }
-
-    //
-    function checkAnswer(){
-        let userAnswer = document.getElementById("answer").value.trim().toLowerCase();
-        let correctAnswer = quizData[currentQuestionIndex].answer;
-        let feedback = document.getElementById("feedback");
-
-        if(userAnswer === correctAnswer){
-            feedback.innerHTML = "Correct well done (change this soon)";
-            feedback.style.color = "green";
-            document.getElementById("nextBtn").classList.remove("hidden");
-            correctAnswered = true; // mark as correct
-            
-        }else{
-            feedback.innerHTML = "X Incorrect! try again change this soon";
-            feedback.style.color = "red";
-        }
-    }
-
-    //
-    function nextQuestion(){
-        if(!correctAnswered){
-            alert("you must answer correctly before proceeding! (change this soon)")
-            return;
-        }
-
-        currentQuestionIndex++;
-        if(currentQuestionIndex < quizData.length){
-            loadQuestion();
-        }else{
-            document.getElementById("question").textContent = "Quiz Complete!";
-            document.getElementById("answer").style.display = "none";
-            document.getElementById("nextBtn").style.display = "none";
-            document.getElementById("feedback").textContent = "Congratulations! you finished the quiz"
-        }
-    }
-
-    //load first question when it load
-    loadQuestion();
-
-</script>
-
 </html>

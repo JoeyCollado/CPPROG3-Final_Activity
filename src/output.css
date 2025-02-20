@@ -236,6 +236,9 @@
 .w-1\/2 {
   width: calc(1/2 * 100%);
 }
+.w-full {
+  width: 100%;
+}
 .w-screen {
   width: 100vw;
 }
