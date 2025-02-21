@@ -6,9 +6,9 @@
 // src code and video
 
 const quizData = [
-    {question: "What does Html stand for?", answer: "hypertext markup language"},
-    {question: "What does css stand for?", answer: "hypertext markup language"},
-    {question: "What does js stand for?", answer: "hypertext markup language"}
+    {question: "Who created Javascript", answer: "Brendan Eich"},
+    {question: "What does CSS stand for?", answer: "Cascading style sheet"},
+    {question: "What is ?avascript?", answer: "Programming language"},
 ];
 
 let currentQuestionIndex = 0;
@@ -30,13 +30,13 @@ function checkAnswer(){
     let feedback = document.getElementById("feedback");
 
     if(userAnswer === correctAnswer){
-        feedback.innerHTML = "Correct well done (change this soon)";
+        feedback.innerHTML = "Correct well done!";
         feedback.style.color = "green";
         document.getElementById("nextBtn").classList.remove("hidden");
         correctAnswered = true; // mark as correct
         
     }else{
-        feedback.innerHTML = "X Incorrect! try again change this soon";
+        feedback.innerHTML = "X Incorrect! try again";
         feedback.style.color = "red";
     }
 }
