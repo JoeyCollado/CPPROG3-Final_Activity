@@ -6,7 +6,7 @@
 // src code and video
 
 const quizData = [
-    {question: "Who created Javascript", answer: "Brendan Eich"},
+    {question: "Who created Javascript?", answer: "Brendan Eich"},
     {question: "What does CSS stand for?", answer: "Cascading style sheet"},
     {question: "What is ?avascript?", answer: "Programming language"},
 ];
