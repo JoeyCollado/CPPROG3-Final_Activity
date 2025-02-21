@@ -6,9 +6,9 @@
 // src code and video
 
 const quizData = [
-    {question: "Who created Javascript?", answer: "Brendan Eich"},
-    {question: "What does CSS stand for?", answer: "Cascading style sheet"},
-    {question: "What is ?avascript?", answer: "Programming language"},
+    {question: "Who created Javascript?", answer: "brendan eich"},
+    {question: "What does CSS stand for?", answer: "cascading style sheet"},
+    {question: "What is Javascript?", answer: "programming language"},
 ];
 
 let currentQuestionIndex = 0;
