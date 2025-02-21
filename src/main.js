@@ -52,7 +52,7 @@ function nextQuestion(){
     if(currentQuestionIndex < quizData.length){
         loadQuestion();
     }else{
-        document.getElementById("question").textContent = "Quiz Complete!";
+        document.getElementById("question").textContent = "Well done!";
         document.getElementById("answer").style.display = "none";
         document.getElementById("nextBtn").style.display = "none";
         document.getElementById("feedback").textContent = "Congratulations! you finished the quiz"
