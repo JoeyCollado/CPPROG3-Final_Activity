@@ -61,3 +61,19 @@ function nextQuestion(){
 
 //load first question when it load
 loadQuestion();
+
+
+//stars
+document.addEventListener("DOMContentLoaded", function() {
+    const numStars = 150;
+    for (let i = 0; i < numStars; i++) {
+        let star = document.createElement("div");
+        star.className = "star";
+        star.style.width = Math.random() * 6 + "px";
+        star.style.height = star.style.width;
+        star.style.top = Math.random() * 100 + "vh";
+        star.style.left = Math.random() * 100 + "vw";
+        star.style.animationDuration = (Math.random() * 1.5 + 1) + "s";
+        document.body.appendChild(star);
+    }
+});
