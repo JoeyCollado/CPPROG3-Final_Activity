@@ -6,6 +6,7 @@
     <title>Activity Quiz Website</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="input.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         @keyframes twinkling {
             0% { opacity: 0.3; transform: translateY(0px); }
@@ -29,6 +30,7 @@
             overflow: hidden;
             background-size: 300% 300%;
             animation: spaceMove 10s linear infinite;
+            font-family: 'Space Grotesk', sans-serif;
         }
         .star {
             position: absolute;
@@ -39,7 +41,6 @@
         }
         .planet {
             position: absolute;
-            border-radius: 50%;
             animation: floating 3s infinite ease-in-out alternate;
         }
     </style>
@@ -48,11 +49,11 @@
     <!--Planet images -->
     <img src="planet1.png" class="planet w-32 h-32 top-[100px] left-16" alt="Planet">
     <img src="planet2.png" class="planet w-[200px] h-[200px] bottom-24 right-12" alt="Planet">
-    <img src="planet3.png" class="planet w-[500px] h-[500px] top-[300px] left-1/4" alt="Planet">
+    <img src="planet3.png" class="planet w-[400px] h-[400px] top-[300px] left-1/4" alt="Planet">
     <img src="planet4.png" class="planet w-[100px] h-[100] top-[100px] left-2/4" alt="Planet">
     <img src="planet.png" class="planet w-[200px] h-[200] top-[390px] left-0" alt="Planet">
     <!--Main html-->
-    <div class="border-2 border-blue-800 p-6 rounded-2xl shadow-2xl text-center w-full max-w-md bg-blue-900/90 backdrop-blur-lg transform transition-all hover:scale-105 duration-300 ease-in-out">
+    <div class="border-2 border-blue-800 p-6 rounded-3xl shadow-2xl text-center w-full max-w-md bg-blue-900/20 backdrop-blur-lg transform transition-all hover:scale-105 duration-300 ease-in-out">
         <h2 class="text-red-400 text-2xl font-extrabold">Quiz Question</h2>
         <p id="question" class="text-2xl my-4 text-white font-bold"></p>
         <input type="text" id="answer" placeholder="Enter your answer" class="border border-gray-300 rounded-lg p-3 w-full bg-white/10 text-white focus:outline-none focus:ring-2 focus:ring-blue-400">
