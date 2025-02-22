@@ -7,7 +7,7 @@
 
 const quizData = [
     {question: "Who created Javascript?", answer: "brendan eich"},
-    {question: "What does CSS stand for?", answer: "cascading style sheet"},
+    {question: "What does JRE stand for?", answer: "java runtime environment"},
     {question: "What does SDLC stand for?", answer: "software development life cycle"},
     {question: "What does DOM stand for?", answer: "document object model"},
     {question: "What does JSON stand for?", answer: "javascript object notation"},
