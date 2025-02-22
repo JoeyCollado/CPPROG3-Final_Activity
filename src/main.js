@@ -9,6 +9,13 @@ const quizData = [
     {question: "Who created Javascript?", answer: "brendan eich"},
     {question: "What does CSS stand for?", answer: "cascading style sheet"},
     {question: "What is Javascript?", answer: "programming language"},
+    {question: "What is Javascript?", answer: "programming language"},
+    {question: "What is Javascript?", answer: "programming language"},
+    {question: "What is Javascript?", answer: "programming language"},
+    {question: "What is Javascript?", answer: "programming language"},
+    {question: "What is Javascript?", answer: "programming language"},
+    {question: "What is Javascript?", answer: "programming language"},
+    {question: "What is Javascript?", answer: "programming language"},
 ];
 
 let currentQuestionIndex = 0;
